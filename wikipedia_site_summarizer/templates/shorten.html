@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheet.css') }}">
+  </head>
+
+  <body class="text-center">
+        
+        <main class="form-signin">
+            <h1 class="h3 mb-3 fw-normal">Here are your Wikipedia Summary:</h1>
+            <br>
+            
+            <div class="main">
+                <p class="article-content">{{ wikidata }}</p>
+            </div>
+            <br>
+            <a href="/home">
+            <button class="w-30 btn btn-lg btn-primary" name="submit" type="submit" value="submit">Let's break down another page!</button>
+            </a>
+
+        </main>
+
+    
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheet.css') }}">
+  </head>
+
+  <body class="text-center">
+      
+      <main class="form-signin">
+        <h1 class="h2 mb-3 fw-normal">Wikipedia Topic Summarizer</h1>
+        <br>
+        <h3 class="h6 mb-3 fw-normal">For the people who want to know a lot but have a lot to do. </h3>  
+        <h3 class="h6 mb-3 fw-normal">This program will display a summary of the Wikipedia article the user posts. The user is able to set the length of the summary, otherwise it will return a 1 setence summary.</h3> 
+        <br>
+        <form action="/shorten" method="POST">
+              
+              <div class="form-floating">
+              <input type="text" class="form-control" name="wikilink" id="wikilink" placeholder="https://en.wikipedia.org/wiki/Stoicism">
+              <label for="wikilink">Enter Wikipedia Link Above</label>
+              </div>
+              <div class="form-floating">
+              <input type="number" class="form-control" name="numoflines" id="wikilink" placeholder="1">
+              <label for="wikilink">Optional: Enter # of sentences you want to display in summary<br>(Cannot be longer than summary on wikipedia page)</label>
+              </div>
+              <br>
+              <br>
+
+              <button class="w-30 btn btn-lg btn-primary" name="submit" type="submit" value="submit">Summarize It</button>
+        </form>
+        </main>
+
+    
+  </body>
+</html>
+
